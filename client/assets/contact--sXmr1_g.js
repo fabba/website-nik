@@ -1,1 +1,0 @@
-import{w as t,p as o}from"./chunk-WWGJGFF6-DaTaPSdi.js";import{C as n}from"./navigation-container-BE-MtQ21.js";const i=t(function(){return o.jsx(n,{children:"Email: nikheemskerk@gmail.com"})});export{i as default};
