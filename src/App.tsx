@@ -1,8 +1,8 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Contact from "./routes/contact";
 import Home from "./routes/home";
 import Logo from "./routes/logo";
 import Stories from "./routes/stories";
-import Contact from "./routes/contact";
 
 export default function App() {
   return (

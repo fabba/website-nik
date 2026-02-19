@@ -1,8 +1,7 @@
-import Container from "~/components/navigation-container";
 
 export default function Stories() {
   return (
-    <Container>
+    <div>
       <div className="prose max-w-none p-4">
         <h1>Vis op het Droge</h1>
 
@@ -55,6 +54,6 @@ export default function Stories() {
           of bezoek de uitgeverij.
         </p>
       </div>
-    </Container>
+    </div>
   );
 }

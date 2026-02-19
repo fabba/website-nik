@@ -1,7 +1,6 @@
-import Container from "~/components/navigation-container";
 
 export default function Logo() {
-    return <Container>
+    return <div>
       Logo
-    </Container>;
+    </div>;
 }
