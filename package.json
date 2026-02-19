@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://fabianv.github.io/website_nik",
+  "homepage": "https://fabba.github.io/website-nik/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
