@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
 import MobileNavigationItem from "./MobileNavigationItem";
 import NavItemComponent from "./navigationItem";
 
@@ -14,8 +12,6 @@ type NavbarProps = {
 };
 
 export default function Navbar({ items }: NavbarProps) {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   return (
     <>
       <nav className="flex-20 flex-col bg-emerald-50 items-center hidden md:flex space-x-6">
@@ -37,22 +33,13 @@ export default function Navbar({ items }: NavbarProps) {
         </div>
       </nav>
 
-      <nav className="flex justify-end items-center md:hidden bg-emerald-50 p-4">
-        {/* Mobile Hamburger */}
-        <div>
-          <button onClick={() => setMobileOpen(!mobileOpen)}>
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="md:hidden px-4 pb-4 space-y-2">
-            {items.map((item, index) => (
-              <MobileNavigationItem key={index} item={item} closeMenu={() => setMobileOpen(false)} />
-            ))}
-          </div>
-        )}
+      <nav className="flex flex-row items-start md:hidden bg-emerald-50 p-4 space-x-6">
+        {items.map((item, index) => (
+          <MobileNavigationItem
+            key={index}
+            item={item}
+          />
+        ))}
       </nav>
     </>
   );

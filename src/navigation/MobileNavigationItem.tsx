@@ -33,7 +33,7 @@ export default function MobileNavigationItem({ item, closeMenu }: { item: NavIte
       {open && (
         <div className="pl-4 border-l space-y-1">
           {item.children.map((child, index) => (
-            <MobileNavigationItem key={index} item={child} closeMenu={closeMenu} />
+            <MobileNavigationItem key={index} item={child} closeMenu={() => setOpen(false)} />
           ))}
         </div>
       )}
