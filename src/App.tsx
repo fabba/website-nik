@@ -11,9 +11,9 @@ const navItems: NavItem[] = [
     href: `${import.meta.env.BASE_URL}#/logo`,
   },
   {
-    label: "Stories",
+    label: "Verhalen:",
     children: [
-      { label: "Water", href: `${import.meta.env.BASE_URL}#/stories` },
+      { label: "Vis op het droge", href: `${import.meta.env.BASE_URL}#/stories` },
     ],
   },
   {

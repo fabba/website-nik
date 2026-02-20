@@ -18,7 +18,7 @@ export default function Navbar({ items }: NavbarProps) {
 
   return (
     <>
-      <nav className="flex-10 flex-col bg-emerald-50 items-center hidden md:flex space-x-6">
+      <nav className="flex-20 flex-col bg-emerald-50 items-center hidden md:flex space-x-6">
         {/* Desktop Menu */}
         <div className="">
           <a
@@ -37,7 +37,7 @@ export default function Navbar({ items }: NavbarProps) {
         </div>
       </nav>
 
-      <nav className="flex justify-end items-center h-16 md:hidden">
+      <nav className="flex justify-end items-center md:hidden bg-emerald-50 p-4">
         {/* Mobile Hamburger */}
         <div>
           <button onClick={() => setMobileOpen(!mobileOpen)}>
@@ -49,7 +49,7 @@ export default function Navbar({ items }: NavbarProps) {
         {mobileOpen && (
           <div className="md:hidden px-4 pb-4 space-y-2">
             {items.map((item, index) => (
-              <MobileNavigationItem key={index} item={item} />
+              <MobileNavigationItem key={index} item={item} closeMenu={() => setMobileOpen(false)} />
             ))}
           </div>
         )}

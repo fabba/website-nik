@@ -2,13 +2,14 @@ import { useState } from "react"
 import type { NavItem } from "./navBar"
 import { ChevronDown } from "lucide-react"
 
-export default function MobileNavigationItem({ item }: { item: NavItem }) {
+export default function MobileNavigationItem({ item, closeMenu }: { item: NavItem, closeMenu?: () => void }) {
   const [open, setOpen] = useState(false)
 
   if (!item.children) {
     return (
       <a
         href={item.href}
+        onClick={() => closeMenu && closeMenu()}
         className="block py-2"
       >
         {item.label}
@@ -32,7 +33,7 @@ export default function MobileNavigationItem({ item }: { item: NavItem }) {
       {open && (
         <div className="pl-4 border-l space-y-1">
           {item.children.map((child, index) => (
-            <MobileNavItem key={index} item={child} />
+            <MobileNavigationItem key={index} item={child} closeMenu={closeMenu} />
           ))}
         </div>
       )}
